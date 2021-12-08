@@ -1,10 +1,6 @@
 import React from 'react';
-import {useState} from 'react';
 
-function FeedbackItem() {
-
-    const [rating, setRating] = useState(7);
-    const [text, setText] = useState("This is an example of a feedback item.");
+function FeedbackItem({id, rating, text}) {
     
     return (
         <div className="card">

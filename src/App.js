@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import Header from './components/Header';
 import FeedbackData from './data/FeedbackData';
@@ -18,7 +19,8 @@ function App() {
 
   const addFeedback = (data) => {
     setFeedback((prev) => {
-      data.id = prev.length + 1;
+      data.id = uuidv4();
+      console.log(data.id);
       return [data, ...prev];
     });
   };

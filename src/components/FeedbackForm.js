@@ -2,11 +2,13 @@ import { useState } from 'react';
 
 import Card from './shared/Card';
 import Button from './shared/Button';
+import RatingSelect from './RatingSelect';
 
 function FeedbackForm({ handleSubmit }) {
   const [text, setText] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState('');
+  const [rating, setRating] = useState(10);
 
   const handleTextChange = (e) => {
     if (text === '') {
@@ -14,7 +16,7 @@ function FeedbackForm({ handleSubmit }) {
       setMessage(null);
     } else if (text !== '' && text.trim().length <= 10) {
       setBtnDisabled(true);
-      setMessage('Text must be at least 10 characters')
+      setMessage('Text must be at least 10 characters');
     } else {
       setBtnDisabled(false);
       setMessage(null);
@@ -22,9 +24,14 @@ function FeedbackForm({ handleSubmit }) {
     setText(e.target.value);
   };
 
+  const handleRatingChange = (newRating) => {
+    setRating(newRating);
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
-    handleSubmit({ text: text, rating: 5 });
+    console.log(rating);
+    handleSubmit({ text: text, rating: rating });
     setText('');
   };
 
@@ -32,7 +39,7 @@ function FeedbackForm({ handleSubmit }) {
     <Card>
       <form>
         <h2>How would you rate your service with us?</h2>
-        {/* {@todo - rating select component} */}
+        <RatingSelect changeRating={handleRatingChange} />
         <div className='input-group'>
           <input
             onChange={handleTextChange}
@@ -40,7 +47,11 @@ function FeedbackForm({ handleSubmit }) {
             placeholder='Write a review'
             value={text}
           />
-          <Button onClick={submitHandler} type='submit' isDisabled={btnDisabled}>
+          <Button
+            onClick={submitHandler}
+            type='submit'
+            isDisabled={btnDisabled}
+          >
             Send
           </Button>
         </div>

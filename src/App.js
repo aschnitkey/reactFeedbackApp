@@ -16,10 +16,10 @@ function App() {
     }
   };
 
-  const submitText = (text) => {
+  const submitData = (data) => {
     setFeedback((prev) => {
-      text.id = prev.length + 1;
-      return [text, ...prev];
+      data.id = prev.length + 1;
+      return [data, ...prev];
     });
   };
 
@@ -27,7 +27,7 @@ function App() {
     <>
       <Header />
       <div className='container'>
-        <FeedbackForm handleSubmit={submitText} />
+        <FeedbackForm handleSubmit={submitData} />
         <FeedbackStats feedback={feedback} />
         <FeedbackList data={feedback} handleDelete={deleteFeedback} />
       </div>

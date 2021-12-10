@@ -18,7 +18,6 @@ function App() {
 
   const submitText = (text) => {
     setFeedback((prev) => {
-      console.log(prev);
       text.id = prev.length + 1;
       return [text, ...prev];
     });

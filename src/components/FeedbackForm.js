@@ -30,14 +30,16 @@ function FeedbackForm({ handleSubmit }) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(rating);
-    handleSubmit({ text: text, rating: rating });
-    setText('');
+    if (text.trim().length > 10) {
+      const newFeedback = { text: text, rating: rating };
+      handleSubmit(newFeedback);
+      setText('');
+    }
   };
 
   return (
     <Card>
-      <form>
+      <form onSubmit={submitHandler}>
         <h2>How would you rate your service with us?</h2>
         <RatingSelect changeRating={handleRatingChange} />
         <div className='input-group'>
@@ -47,11 +49,7 @@ function FeedbackForm({ handleSubmit }) {
             placeholder='Write a review'
             value={text}
           />
-          <Button
-            onClick={submitHandler}
-            type='submit'
-            isDisabled={btnDisabled}
-          >
+          <Button type='submit' isDisabled={btnDisabled}>
             Send
           </Button>
         </div>

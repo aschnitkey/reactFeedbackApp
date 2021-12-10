@@ -16,7 +16,7 @@ function App() {
     }
   };
 
-  const submitData = (data) => {
+  const addFeedback = (data) => {
     setFeedback((prev) => {
       data.id = prev.length + 1;
       return [data, ...prev];
@@ -27,7 +27,7 @@ function App() {
     <>
       <Header />
       <div className='container'>
-        <FeedbackForm handleSubmit={submitData} />
+        <FeedbackForm handleSubmit={addFeedback} />
         <FeedbackStats feedback={feedback} />
         <FeedbackList data={feedback} handleDelete={deleteFeedback} />
       </div>

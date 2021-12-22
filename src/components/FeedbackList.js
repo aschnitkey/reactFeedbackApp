@@ -45,14 +45,13 @@ function FeedbackList() {
 
 //   return (
 //     <div className='feedback-list'>
-//       {data.map((item) => {
+//       {feedback.map((item) => {
 //         return (
 //           <FeedbackItem
 //             key={item.id}
 //             id={item.id}
 //             rating={item.rating}
 //             text={item.text}
-//             handleDelete={handleDelete}
 //           />
 //         );
 //       })}

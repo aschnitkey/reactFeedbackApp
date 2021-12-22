@@ -49,6 +49,7 @@ function FeedbackForm() {
         addFeedback(newFeedback);
       } else {
         updateFeedback(feedbackEdit.item.id, newFeedback);
+        feedbackEdit.edit = false;
       }
       setText('');
     }

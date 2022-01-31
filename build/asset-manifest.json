@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.4a7cb8a7.chunk.css",
-    "main.js": "/static/js/main.c8429864.chunk.js",
-    "main.js.map": "/static/js/main.c8429864.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8c3f443e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8c3f443e.js.map",
-    "static/js/2.c42b2d3e.chunk.js": "/static/js/2.c42b2d3e.chunk.js",
-    "static/js/2.c42b2d3e.chunk.js.map": "/static/js/2.c42b2d3e.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.4a7cb8a7.chunk.css.map": "/static/css/main.4a7cb8a7.chunk.css.map",
-    "static/js/2.c42b2d3e.chunk.js.LICENSE.txt": "/static/js/2.c42b2d3e.chunk.js.LICENSE.txt",
-    "static/media/spinner.a1a99674.gif": "/static/media/spinner.a1a99674.gif"
+    "main.css": "/reactFeedbackApp/static/css/main.4a7cb8a7.chunk.css",
+    "main.js": "/reactFeedbackApp/static/js/main.c8429864.chunk.js",
+    "main.js.map": "/reactFeedbackApp/static/js/main.c8429864.chunk.js.map",
+    "runtime-main.js": "/reactFeedbackApp/static/js/runtime-main.25757de1.js",
+    "runtime-main.js.map": "/reactFeedbackApp/static/js/runtime-main.25757de1.js.map",
+    "static/js/2.c42b2d3e.chunk.js": "/reactFeedbackApp/static/js/2.c42b2d3e.chunk.js",
+    "static/js/2.c42b2d3e.chunk.js.map": "/reactFeedbackApp/static/js/2.c42b2d3e.chunk.js.map",
+    "index.html": "/reactFeedbackApp/index.html",
+    "static/css/main.4a7cb8a7.chunk.css.map": "/reactFeedbackApp/static/css/main.4a7cb8a7.chunk.css.map",
+    "static/js/2.c42b2d3e.chunk.js.LICENSE.txt": "/reactFeedbackApp/static/js/2.c42b2d3e.chunk.js.LICENSE.txt",
+    "static/media/spinner.a1a99674.gif": "/reactFeedbackApp/static/media/spinner.a1a99674.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.8c3f443e.js",
+    "static/js/runtime-main.25757de1.js",
     "static/js/2.c42b2d3e.chunk.js",
     "static/css/main.4a7cb8a7.chunk.css",
     "static/js/main.c8429864.chunk.js"
